@@ -1,0 +1,45 @@
+{
+    "mcpServers": {
+      "playwright": {
+        "command": "npx",
+        "args": [
+          "@playwright/mcp@latest"
+        ]
+      },
+      "sequential-thinking": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-sequential-thinking"
+        ]
+      },
+      "browser-tools": {
+        "command": "npx",
+        "args": ["@agentdeskai/browser-tools-mcp@latest"]
+      },
+      "interactive-feedback-mcp": {
+        "command": "uv",
+        "args": [
+          "--directory",
+          "D:\\user\\interactive-feedback-mcp",
+          "run",
+          "server.py"
+        ],
+        "timeout": 600,
+        "autoApprove": [
+          "interactive_feedback"
+        ]
+      },
+      "context7": {
+        "command": "npx",
+        "args": ["-y", "@upstash/context7-mcp@latest"]
+      },
+      "github": {
+        "command": "npx",
+        "args": ["-y", "@modelcontextprotocol/server-github"],
+        "env": {
+          "GITHUB_PERSONAL_ACCESS_TOKEN": "YOUR_GITHUB_TOKEN_HERE"
+        }
+      }
+    }
+  }
